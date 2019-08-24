@@ -16,7 +16,9 @@
 require 'date'
 require 'byebug'
 
-Dir[File.join(File.dirname(__FILE__), "../*.rb")].each { |f| require f }
+%w[models services].each do |dir_name|
+  Dir[File.join(File.dirname(__FILE__), "../app/#{dir_name}/*.rb")].each { |f| require f }
+end
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
