@@ -12,6 +12,9 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+#
+require 'date'
+require 'byebug'
 
 Dir[File.join(File.dirname(__FILE__), "../*.rb")].each { |f| require f }
 
